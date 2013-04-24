@@ -1,0 +1,24 @@
+#**************************************
+# This Bash Script accomplishes the following task:
+#------------------------------------
+# Refer below tables:
+# Table1:
+# Device        Interface               Specified
+#------------------------------------------------------
+# HDC-TBONE-P1  PO9/0/0-pos             121.36
+# ocb-pe1       Gi5/2-ethernetCsmacd    0.17
+#______________________________________________________
+# Table2:
+# CID           Device          Interface       Avgin
+#------------------------------------------------------
+# HDC-HKG-R01   HDC-TBONE-P1    PO9/0/0
+# OCB-OCD-R01   OCB-PE1 Gi5/2
+# HDC-BSA-R01   HDC-TBONE-P1    Se9/2/0
+#_____________________________________________________
+# 1. It matches the row with this condition: Common values of Device columns AND first three chars of Interface column from both tables.
+# 2. Then the row which matched the above condition from Table1, retrieve the value of Specified column and store it in the Avgin column of the Table2 in the row where above condition matched.
+#------------------------------------
+# Tested on Fedora with MySQL version 14.14.
+# Created by geeksScript | Sanchit (http://geeksScript.com), Dated: 07-04-2013.
+#**************************************
+
